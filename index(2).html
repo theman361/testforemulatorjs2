@@ -7,6 +7,11 @@
             }
         </style>
         <h1> test</h1>
+        <label for="game_name">Choose a game:</label>
+            <select name="game_name" id="game_name">
+            <option value="/Legend of Zelda, The - The Minish Cap (USA).gba">זלדה</option>
+            <option value="/Kirby & The Amazing Mirror (Europe) (En,Fr,De,Es,It).gba">קרבי</option>
+          </select>
     </head>
     <body>
         <div style='width:640px;height:480px;'>
@@ -23,11 +28,12 @@
           EJS_biosUrl = '/gba_bios (1).bin';
     
     // URL to Game rom
-          EJS_gameUrl = '/Kirby & The Amazing Mirror (Europe) (En,Fr,De,Es,It).gba';
+          EJS_gameUrl = document.getElementById("game_name").value;
     
     // Path to the data directory
           EJS_pathtodata = 'data/';
       </script>
+      <h1></h1>
     <script src='data/loader.js'></script>
       </body>
     </html>
